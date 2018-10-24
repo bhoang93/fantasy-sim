@@ -1,13 +1,17 @@
 {
   "name": "fantasy-sim",
   "version": "0.1.0",
+  "homepage": "http://bhoang93.github.io/fantasy-sim",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,0 +1,39 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
+.action-log {
+  color: white;
+  font-size: $default-font-size;
+  background-color: $background-color2;
+  width: $col-width;
+  height: 80vh;
+  overflow-y: scroll;
+  outline: $outline-thickness solid $outline-color;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @include mobile {
+    width: $col-width-mobile;
+  }
+
+  @include tablet {
+    width: $col-width-tablet;
+  }
+}
+
+.action-report {
+  text-align: center;
+
+  &:hover {
+    background-color: lighten($background-color2, 30%);
+    color: black;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &:last-child {
+    font-weight: 600;
+  }
+}

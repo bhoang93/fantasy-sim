@@ -1,0 +1,89 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.action-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $default-font-size;
+  background-color: $background-color;
+  width: $col-width;
+  padding: 2rem;
+  margin-right: $grid-space;
+  outline: $outline-thickness solid $outline-color;
+  text-align: center;
+  position: relative;
+
+  @include mobile {
+    width: $col-width-mobile;
+  }
+
+  @include tablet {
+    width: $col-width-tablet;
+  }
+
+  h2 {
+    margin-bottom: $header-space-med;
+  }
+
+  h3 {
+    margin-bottom: $header-space-small;
+  }
+}
+
+.major-status {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  top: 0;
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: $major-status-color;
+  z-index: 100;
+}
+
+.change-tab {
+  padding-bottom: 1rem;
+}
+
+.take-rest {
+  padding-bottom: 1rem;
+}
+
+.action {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+    font-weight: 600;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.action-block {
+  margin-bottom: $header-space-med;
+}
+
+.item-to-buy {
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+    font-weight: 600;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
